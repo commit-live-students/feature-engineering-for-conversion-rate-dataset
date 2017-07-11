@@ -50,7 +50,7 @@ def sqrt_transform(df,ls):
         if col not in set(df.columns.values):
             raise KeyError
         df[col_sqrt] = df[col].apply(math.sqrt)
-        cols_ls.append(df[col_sqrt])
+        cols_ls.append(df[col_sqrt].tolist())
     return cols_ls
 
 
